@@ -91,7 +91,7 @@ module Okta
     # init client
     def client(issuer)
       Faraday.new(url: issuer) do |f|
-        f.adapter Faraday::Adapter::NetHttp
+        f.adapter Faraday.default_adapter
         f.headers['Accept'] = 'application/json'
       end
     end
