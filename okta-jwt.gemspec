@@ -5,7 +5,7 @@ require "okta/jwt/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "okta-jwt"
-  spec.version       = Okta::Jwt::VERSION
+  spec.version       = Oktajwt::Jwt::VERSION
   spec.authors       = ["Damir Roso"]
   spec.email         = ["damir.roso@nih.gov"]
 
