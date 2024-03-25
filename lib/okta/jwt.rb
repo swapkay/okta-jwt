@@ -4,7 +4,7 @@ require 'base64'
 require 'faraday'
 require 'json/jwt'
 
-module Okta
+module Oktajwt
   module Jwt
     module_function
 
@@ -66,7 +66,7 @@ module Okta
       return JWKS_CACHE[kid] if JWKS_CACHE[kid]
   
       # fetch jwk
-      logger.info("[Okta::Jwt] Fetching public key: kid => #{kid} ...") if logger
+      logger.info("[Oktajwt::Jwt] Fetching public key: kid => #{kid} ...") if logger
       jwks_response = client(payload['iss']).get do |req|
         req.url get_metadata(payload)['jwks_uri']
       end

@@ -1,4 +1,4 @@
-module Okta
+module Oktajwt
   module Jwt
     VERSION = "0.6.0"
   end
